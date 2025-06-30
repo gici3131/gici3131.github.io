@@ -1,13 +1,45 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Video Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Promo Shopee</title>
+
+  <!-- Twitter Card untuk preview -->
+  <meta name="twitter:card" content="player">
+  <meta name="twitter:title" content="Video Lucu - Promo Shopee">
+  <meta name="twitter:description" content="Tonton dulu videonya, terus langsung belanja di Shopee!">
+  <meta name="twitter:player" content="https://gici3131.github.io/vid.html">
+  <meta name="twitter:player:width" content="720">
+  <meta name="twitter:player:height" content="400">
+  <meta name="twitter:image" content="https://gici3131.github.io/thumbnail.jpg">
+
+  <!-- Open Graph untuk jaga-jaga preview platform lain -->
+  <meta property="og:type" content="video.other">
+  <meta property="og:title" content="Video Lucu - Promo Shopee">
+  <meta property="og:description" content="Tonton dulu videonya, terus langsung belanja di Shopee!">
+  <meta property="og:image" content="https://gici3131.github.io/thumbnail.jpg">
+  <meta property="og:video" content="https://gici3131.github.io/video.mp4">
+  <meta property="og:video:type" content="video/mp4">
+  <meta property="og:video:width" content="720">
+  <meta property="og:video:height" content="400">
+
+  <style>
+    body { margin: 0; padding: 0; background: #000; display: flex; justify-content: center; align-items: center; height: 100vh; }
+    video { width: 100%; max-width: 720px; height: auto; border-radius: 12px; }
+  </style>
 </head>
-<body style="margin:0;padding:0;display:flex;justify-content:center;align-items:center;height:100vh;background:#000;">
-  <video width="100%" height="auto" controls autoplay>
+<body>
+  <video id="vid" autoplay controls muted>
     <source src="video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    Browser tidak mendukung video.
   </video>
+
+  <script>
+    document.getElementById("vid").addEventListener("ended", function () {
+      window.location.href = "https://s.shopee.co.id/3fs39uSElf";
+    });
+  </script>
 </body>
 </html>
